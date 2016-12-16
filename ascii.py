@@ -1,3 +1,4 @@
+#program to convert raw text to ascii integer format
 #author $ @ (R) @ -|- #  |< @ D @ \/ |_| |_
 
 import sys
