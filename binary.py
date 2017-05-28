@@ -2,6 +2,7 @@
 #author $ @ (R) @ -|- #  |< @ D @ \/ |_| |_
 
 import sys
+
 data = raw_input('enter the string  ')
 ba = bytearray(data)
 for bi in ba:
