@@ -21,6 +21,7 @@ def selectsong():
 	a = glob.glob("*.flac")
 	b = glob.glob("*.mp3")
 	c = glob.glob("*.wav")
+	flag = False
 	for k in c:
 		a.append(k)
 	for k in b:
@@ -30,10 +31,19 @@ def selectsong():
 		print(j,i)
 		j = j+1
 	ch = int(raw_input("enter the song number>>"))
-	song = pygame.mixer.Sound(a[ch-1])
+	name = a[ch-1]
+	if(".mp3" in name):
+		flag = True
+		pygame.mixer.music.load(name)
+	else:
+		song = pygame.mixer.Sound(name)
 	if(pygame.mixer.get_busy()):
 		pygame.mixer.stop()
-	selectsong.channel = song.play()
+	if(flag):
+		pygame.mixer.music.play()
+		selectsong.channel = pygame.mixer.music
+	else:
+		selectsong.channel = song.play()
 	print("playing song",a[ch-1])
 	quittt()
 pygame.init()
