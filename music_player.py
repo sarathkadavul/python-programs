@@ -38,6 +38,3 @@ def selectsong():
 	quittt()
 pygame.init()
 track = selectsong()
-#song = pygame.mixer.Sound(track)
-#channel = song.play()
-#quittt()
