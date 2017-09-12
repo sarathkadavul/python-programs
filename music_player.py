@@ -20,6 +20,9 @@ def quittt():
 def selectsong():
 	a = glob.glob("*.flac")
 	b = glob.glob("*.mp3")
+	c = glob.glob("*.wav")
+	for k in c:
+		a.append(k)
 	for k in b:
 		a.append(k)
 	j =1
